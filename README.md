@@ -5,8 +5,6 @@ Source to follow PyLadies class about Django and Docker on 05/Oct/2018
 
 1. Docker
     1. Introduction to Docker: What is it and overview of how it works.
-        - **Build image:** `docker build -t class/nginx`.
-        - **Run container:** `docker run --name my_site -p 8080:80 class/nginx`.
     2. Introduction to docker-compose: What is it and how it works.
     3. Examples on how to use Docker and docker-compose: Running different services.
 2. Django application setup
