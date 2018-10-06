@@ -6,6 +6,15 @@ services:
             dockerfile: Dockerfile
         image: class/nginx
         ports:
-            - "8080:80"
+            - "80:80"
         volumes:
             - ./imgs:/srv/www/site/imgs
+        links:
+            - blog
+    blog:
+        image: jekyll/jekyll:latest
+        volumes: 
+            - ./blog:/srv/jekyll
+        ports:
+            - "4000:4000"
+        command: jekyll serve
