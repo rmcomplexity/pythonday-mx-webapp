@@ -25,7 +25,7 @@ SECRET_KEY = '90e-m93m1s2-=_^hf&wi@9$f-t1r)1bav=bvr9o^h5au+i)+d0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -164,7 +164,7 @@ LOGGING = {
             'handlers': ['console'],
             'propagate': True,
         },
-        'myproject.custom': {
+        'vanilla': {
             'handlers': ['console', 'console_debug'],
             'level': 'DEBUG',
         }
