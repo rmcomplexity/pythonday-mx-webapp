@@ -9,6 +9,7 @@ Source to follow PyLadies class about Django and Docker on 05/Oct/2018
         - **Run container:** `docker run --rm --name my_site -p 8080:80 class/nginx`.
         - **Mount a volume:** `docker run --rm --name my_site -p 8080:80 -v $(pwd)/imgs:/srv/www/site/imgs class/nginx`
     2. Introduction to docker-compose: What is it and how it works.
+        - **Run docker-compose:** `docker-compose up`
     3. Examples on how to use Docker and docker-compose: Running different services.
 2. Django application setup
     1. Local setup: development, logging, testing, debugging

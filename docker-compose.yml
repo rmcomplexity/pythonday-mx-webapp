@@ -1,0 +1,11 @@
+version: "3"
+services:
+    nginx:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: class/nginx
+        ports:
+            - "8080:80"
+        volumes:
+            - ./imgs:/srv/www/site/imgs
