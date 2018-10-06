@@ -1,0 +1,12 @@
+version: "3"
+services:
+    nginx:
+        volumes:
+            - ../conf/nginx/default_prod.conf:/etc/nginx/conf.d/default.conf
+    django:
+        image: rmcomplexity/vanilla:local
+        logging:
+            driver: syslog
+        volumes:
+            - ../conf/uwsgi/uwsgi.ini:/etc/uwsgi/uwsgi.ini
+        command: ["uwsgi", "--ini", "/etc/uwsgi/uwsgi.ini"]

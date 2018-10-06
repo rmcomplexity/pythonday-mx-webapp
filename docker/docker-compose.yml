@@ -1,20 +1,31 @@
 version: "3"
 services:
     nginx:
-        build:
-            context: ./../
-            dockerfile: docker/Dockerfile
-        image: class/nginx
+        image: nginx:alpine
         ports:
             - "80:80"
         volumes:
-            - ./../imgs:/srv/www/site/imgs
+            - ../conf/nginx/default.conf:/etc/nginx/conf.d/default.conf
         links:
-            - blog
-    blog:
-        image: jekyll/jekyll:latest
+            - django
+    postgres:
+      image: postgres
+      volumes:
+        - postgres_data:/var/lib/postgresql/data/portal
+      ports:
+        - 5432:5432
+      environment:
+        - POSTGRES_PASSWORD=dev
+        - POSTGRES_USER=dev
+        - POSTGRES_DB=dev
+        - PGDATA=/var/lib/postgresql/data/portal
+    django:
+        build:
+            context: ./../
+            dockerfile: docker/Dockerfile
         volumes: 
-            - ./../blog:/srv/jekyll
-        ports:
-            - "4000:4000"
-        command: jekyll serve
+            - ./../vanilla:/srv/www/vanilla
+        links:
+            - postgres
+volumes:
+    postgres_data:
