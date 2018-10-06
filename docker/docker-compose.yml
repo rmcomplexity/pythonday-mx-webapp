@@ -2,19 +2,19 @@ version: "3"
 services:
     nginx:
         build:
-            context: .
-            dockerfile: Dockerfile
+            context: ./../
+            dockerfile: docker/Dockerfile
         image: class/nginx
         ports:
             - "80:80"
         volumes:
-            - ./imgs:/srv/www/site/imgs
+            - ./../imgs:/srv/www/site/imgs
         links:
             - blog
     blog:
         image: jekyll/jekyll:latest
         volumes: 
-            - ./blog:/srv/jekyll
+            - ./../blog:/srv/jekyll
         ports:
             - "4000:4000"
         command: jekyll serve
