@@ -4,7 +4,7 @@
 
 1. Docker
     1. Introducción a Docker: que es y como funciona.
-        - **Compilar imagen:** `docker build -t class/nginx`.
+        - **Compilar imagen:** `docker build -t class/nginx .`
         - **Correr contenedor:** `docker run --name my_site -p 8080:80 class/nginx`.
     2. Introducción a `docker-compose`.
     3. Ejemplos de como usar Docker y `docker-compose`.
