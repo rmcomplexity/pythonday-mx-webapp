@@ -1,0 +1,13 @@
+<ul class="articulos" style="list-style-type:none;">
+    {% for articulo in object_list %}
+        <li style="border-bottom:1px solid black; padding-bottom:10px;">
+            <ul>
+                <li><h3>{{articulo.titulo}}</h3></li>
+                <li><p>{{articulo.intro}}</p></li>
+                <li><p>{{articulo.contenido}}</p></li>
+            </ul>
+        </li>
+    {% empty %}
+        <li> No hay artículos. </li>
+    {% endfor %}
+</ul>
