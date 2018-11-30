@@ -1,28 +1,25 @@
-# pyladies-django-docker
-Source to follow PyLadies class about Django and Docker on 05/Oct/2018
+# Un Webapp en Contenedores.
 
-## Outline
+## Secciones
 
 1. Docker
-    1. Introduction to Docker: What is it and overview of how it works.
-        - **Build image:** `docker build -t class/nginx`.
-        - **Run container:** `docker run --rm --name my_site -p 8080:80 class/nginx`.
-        - **Mount a volume:** `docker run --rm --name my_site -p 8080:80 -v $(pwd)/imgs:/srv/www/site/imgs class/nginx`
-    2. Introduction to docker-compose: What is it and how it works.
-        - **Run docker-compose:** `docker-compose up`
-    3. Examples on how to use Docker and docker-compose: Running different services.
-2. Django application setup
-    1. Local setup: development, logging, testing, debugging
-    2. Production setup: HTTP Server (Nginx), WSGI server (uwsgi/gunicorn), Application server (Django)
-    3. Why different setups?
-    4. Why these specific setups?
-3. Putting it all together
-    1. Pros and cons of the HTTP server, WSGI server, Application server running locally and in containers.
-    2. Moving a Django application into containers (containerization).
-    3. Local setup: development, logging, testing, debugging
-    4. Production setup: HTTP Server (Nginx), WSGI server (uwsgi/gunicorn), Application server (Django)
-    5. Tips on deploying to staging/production.
-4. Recommendations
-    1. Local docker management.
-    2. Container management locally and in remote servers.
-    3. Future Work.
+    1. Introducción a Docker: que es y como funciona.
+        - **Compilar imagen:** `docker build -t class/nginx .`
+        - **Montar un volúmen:** `docker run --rm --name my_site -p 8080:80 -v $(pwd)/imgs:/srv/www/site/imgs class/nginx`
+    2. Introducción a `docker-compose`.
+        - **Correr docker-compose:** `docker-compose up`
+    3. Ejemplos de como usar Docker y `docker-compose`.
+2. Configuración de una applicación Django.
+    1. Configuración local: desarrollo, logs, pruebas y debug.
+    2. Configuración en producción: Servidor HTTP (Nginx), Servidor WSGI (uwsgi/gunicorn), Aplicación (Django)
+    3. Por que diferentes configuraciones?
+    4. Por que estas configuraciones?
+3. La imagen completa.
+    1. Pros y contras de correr estos servicios con y sin contenedores.
+    2. Moviendo una aplicación Django a contenedores (contenerizando).
+    3. Configuración local: desarrollo, logs, tests, debug.
+    4. Configuración en producción: Servidor HTTP, Servidor WSGI, Applicación (Django).
+    5. Tips para ir a QA/producción.
+4. Recomendaciones.
+    1. Manejo de Docker local.
+    2. Manejo de contenedores local y en servidores.
