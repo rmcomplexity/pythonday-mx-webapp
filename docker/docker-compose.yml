@@ -23,6 +23,7 @@ services:
         build:
             context: ./../
             dockerfile: docker/Dockerfile
+        image: class/django:v1
         volumes: 
             - ./../vanilla:/srv/www/vanilla
         links:
