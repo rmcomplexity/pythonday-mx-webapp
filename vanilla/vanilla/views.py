@@ -15,7 +15,7 @@ def index(request):
     return HttpResponse(
         "<html>"
         "    <body>"
-        "        <h1>We did it!</h1>"
+        "        <h1>!Éxito!</h1>"
         "    </body>"
         "</html>"
     )
