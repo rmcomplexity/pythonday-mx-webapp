@@ -8,10 +8,10 @@
     3. Ejemplo de como usar Docker y `docker-compose`: Jekyll.
 2. Configuración de una applicación Django.
     1. Configuración local: desarrollo, logs, pruebas y debug.
-        Instala `virtualenv`: `pip install virtualenv`.
-        Corre Django `runserver`: `./manage.py runserver 0.0.0.0:8000`
-        Corre Pruebas: `./manage.py test -v2`
-        Corre `ipdb`: `python -m ipdb manage.py runserver 0.0.0.0:8000` o `python -m ipdb manage.py runserver 0.0.0.0:8000 --nothreading --noreload`
+        - Instala `virtualenv`: `pip install virtualenv`.
+        - Corre Django `runserver`: `./manage.py runserver 0.0.0.0:8000`
+        - Corre Pruebas: `./manage.py test -v2`
+        - Corre `ipdb`: `python -m ipdb manage.py runserver 0.0.0.0:8000` o `python -m ipdb manage.py runserver 0.0.0.0:8000 --nothreading --noreload`
     2. Configuración en producción: Servidor HTTP (Nginx), Servidor WSGI (uwsgi/gunicorn), Aplicación (Django)
     3. Por que diferentes configuraciones?
     4. Por que estas configuraciones?
