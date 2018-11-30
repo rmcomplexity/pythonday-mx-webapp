@@ -8,7 +8,8 @@
         - **Montar un volúmen:** `docker run --rm --name my_site -p 8080:80 -v $(pwd)/imgs:/srv/www/site/imgs class/nginx`
     2. Introducción a `docker-compose`.
         - **Correr docker-compose:** `docker-compose up`
-    3. Ejemplos de como usar Docker y `docker-compose`.
+    3. Ejemplo de como usar Docker y `docker-compose`.
+        - **Correr docker-compose:** `docker-compose up`
 2. Configuración de una applicación Django.
     1. Configuración local: desarrollo, logs, pruebas y debug.
     2. Configuración en producción: Servidor HTTP (Nginx), Servidor WSGI (uwsgi/gunicorn), Aplicación (Django)
